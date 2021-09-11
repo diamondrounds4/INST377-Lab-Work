@@ -91,12 +91,22 @@
 
     <p>Include the four images in the /images folder below</p>
     <p>Don't forget to use alt text on your images. It's important for accessibility</p>
-    <img style='object-fit: cover;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;'
+    <img style='scroll-snap-align: start;
+        flex-shrink: 0;
+        width: 100px;
+        height: 100px;
+        margin-right: 50px;
+        border-radius: 10px;
+        background: #eee;
+        transform-origin: center center;
+        transform: scale(1);
+        transition: transform 0.5s;
+        position: relative;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 100px;'
         src='images/onigiri_1.png' alt='A spotted onigiri' />
 
     </br>

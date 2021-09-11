@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Diamond Rounds Lab 2</title>
     <link rel="stylesheet" href="styles.css"/>
+    
 </head>
 <body>
     <div style='background-color: rgba(0,139, 139,0.8);
@@ -47,8 +48,8 @@
                 <li>And other web development frameworks</li>
             </ui>
         </div>
-        
-        <div class='column left' styele='display: flex; justify-content: space-around;
+
+        <div class='column right' styele='display: flex; justify-content: space-around;
                 flex-flow: row wrap;
                 background-color: #EFEFEF;
                 border: 2px dashed;
@@ -64,12 +65,17 @@
             </ol>
         </div>
     </div>
+    <div style='background-color: skyblue;
+            border: 1px dashed #000;
+            border-radius: 4px;
+            padding: 15px;
+            margin: 20px 25px;'>
+        <h3>Let's Try Some Inline Elements</h3>
 
-    <h3>Let's Try Some Inline Elements</h3>
-
-    <p>Sometimes you want to <em>draw attention to something</em> in a line of text</p>
-    <p>Sometimes you wan to <strong>strongly emphasize something</strong> in the text</p>
-    <p>Sometimes you want to <em><strong>do both</strong></em></p>
+        <p>Sometimes you want to <em>draw attention to something</em> in a line of text</p>
+        <p>Sometimes you wan to <strong>strongly emphasize something</strong> in the text</p>
+        <p>Sometimes you want to <em><strong>do both</strong></em></p>
+    </div>
 
     <h4>Empty Elements</h4>
 
@@ -85,7 +91,8 @@
 
     <p>Include the four images in the /images folder below</p>
     <p>Don't forget to use alt text on your images. It's important for accessibility</p>
-    
+    <img src='images/onigiri_1.png' alt='A spotted onigiri' />
+
     </br>
 
     <p><a href='https://github.com/diamondrounds4/INST377-Lab-Work'>
@@ -93,10 +100,34 @@
 
     <p>If you want your repo to be private, be sure to invite Prof A as a "collaborator</p>
 
-    <h6>CSS Selectors</h6>
+    <div style='background-color: rgba(0,139, 139,0.8);
+            display: inline-block;
+            border-radius: 4px;
+            padding: 10px 15px;
+            margin: 0;
+            margin-bottom: 15px;'>
+        <h6>Diamond Rounds Lab 2: CSS Selectors</h6>
+    </div>
+    <div class='row'>
+        <div class='column' style='background-color: rgba(0,139, 139,0.4);
+            background-color: rgba(0,139, 139,0.4);
+            display: flex;
+            flex-flow: row wrap;
+            border-radius: 4px;
+            justify-content: space-evenly;
+            padding: 10px;
+            margin-bottom: 15px;'>
+        <a href='selectors.html'>Selectors</a>
+        <a href='index.html'>Main Page</a>
+        </div>
+    </div>
 
-    <p><a href='selectors.html'>Selectors</a></p>
-    <p><a href='index.html'>Main Page</a></p>
+    <p>CSS selectors let you select individual HTML elements in an HTML document.
+        This is <strong>super</strong> useful. Classes are ridiculously important, 
+        since they allow you to select arbitrary boxes in your web pages. Once you
+        successfully develop a set of selectors and CSS rules, it's relatively easy
+        to match a document to those rules.
+    </p>
 
 </body>
 </html>

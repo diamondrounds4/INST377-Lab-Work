@@ -5,16 +5,14 @@ document.addEventListener('DOMContentLoaded' , () => {
 
     let birdLeft = 220
     let birdBottom = 100
-    let gravity = 3
-    let isGameOver = false
-    let gap = 430
-
+    let gravity = 2
 
     function startGame() {
         birdBottom -= gravity
         bird.style.bottom = birdBottom + 'px'
         bird.style.left = birdLeft + 'px'
     }
+
     let gameTimerId = setInterval(startGame, 20)
 
     function control(e) {
@@ -30,13 +28,14 @@ document.addEventListener('DOMContentLoaded' , () => {
     }
     document.addEventListener('keyup', control)
 
-
     function generateObstacle() {
-        let obstacleLeft = 500
+       /* let obstacleLeft = 500
         let randomHeight = Math.random() * 60
-        let obstacleBottom = randomHeight
+        let obstacleBottom = randomHeight*/
         const obstacle = document.createElement('div')
-        const topObstacle = document.createElement('div')
+        obstacle.classList.add('obstacle')
+    }
+       /* const topObstacle = document.createElement('div')
         if (!isGameOver) {
             obstacle.classList.add('obstacle')
             topObstacle.classList.add('topObstacle')
@@ -80,8 +79,8 @@ document.addEventListener('DOMContentLoaded' , () => {
         isGameOver = true
         document.removeEventListener('keyup', control)
         ground.classList.add('ground')
-        ground.classList.remove('ground-moving')
-    }
+        ground.classList.remove('ground')
+    }*/
 
 
 })

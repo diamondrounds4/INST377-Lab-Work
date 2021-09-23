@@ -26,3 +26,10 @@
     width: 60px;
     height: 45px;
 }
+
+.obstcale {
+    background-color: green;
+    width: 60px;
+    height: 300px;
+    position: absolute;
+}

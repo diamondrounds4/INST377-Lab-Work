@@ -49,12 +49,13 @@ document.addEventListener('DOMContentLoaded' , () => {
                 gameDisplay.removeChild(topObstacle)
             }
             if (
-                obstacleLeft > 200 && obstacleLeft < 280 && birdLeft === 220 ||
+                obstacleLeft > 200 && obstacleLeft < 280 && birdLeft === 220 &&
+                birdBottom < obstacleBottom + 190||
                 birdBottom === 0
                 ) {
                 gameOver()
+                clearInterval(timerId)
             }
-
         }
         let timerId = setInterval(moveObstacle, 20) 
         if (!isGameOver) setTimeout(generateObstacle, 3000)

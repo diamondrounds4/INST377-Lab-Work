@@ -34,27 +34,27 @@ document.addEventListener('DOMContentLoaded' , () => {
         let randomHeight = Math.random() * 60
         let obstacleBottom = randomHeight
         const obstacle = document.createElement('div')
-        /*const topObstacle = document.createElement('div')*/
+        const topObstacle = document.createElement('div')
         if (!isGameOver) {
             obstacle.classList.add('obstacle')
-            /*topObstacle.classList.add('topObstacle')*/
+            topObstacle.classList.add('topObstacle')
         }
         gameDisplay.appendChild(obstacle)
         gammeDisplay.appendChild(topObstacle)
         obstacle.style.left = obstacleLeft + 'px'
-        /*topObstacle.style.left = obstacleLeft + 'px'*/
+        topObstacle.style.left = obstacleLeft + 'px'
         obstacle.style.bottom = obstacleBottom + 'px'
-        /*topObstacle.style.bottom = obstacleBottom + gap + 'px'*/
+        topObstacle.style.bottom = obstacleBottom + gap + 'px'
 
         function moveObstacle() {
             obstacleLeft -=2
             obstacle.style.left = obstacleLeft + 'px'
-            /*topObstacle.style.left - obstacleLeft + 'px'*/
+            topObstacle.style.left - obstacleLeft + 'px'
 
             if (obstacleLeft === -60) {
                 clearInterval(timerId)
                 gameDisplay.removeChild(obstacle)
-                /*gameDisplay.removeChild(topObstacle)*/
+                gameDisplay.removeChild(topObstacle)
             }
             if (
                 obstacleLeft > 200 && obstacleLeft < 280 && birdLeft === 220 &&

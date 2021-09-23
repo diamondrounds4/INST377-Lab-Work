@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded' , () => {
 
     let birdLeft = 220
     let birdBottom = 100
-    let gravity = 2
+    let gravity = 3
     let isGameOver = false
     let gap = 430
 
@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded' , () => {
         bird.style.bottom = birdBottom + 'px'
         bird.style.left = birdLeft + 'px'
     }
-
     let gameTimerId = setInterval(startGame, 20)
 
     function control(e) {
@@ -45,11 +44,11 @@ document.addEventListener('DOMContentLoaded' , () => {
         obstacle.style.left = obstacleLeft + 'px'
         topObstacle.style.left = obstacleLeft + 'px'
         obstacle.style.bottom = obstacleBottom + 'px'
-        topObstacle.style.bottom = obstacleBottom + 'px'
+        topObstacle.style.bottom = obstacleBottom + gap + 'px'
 
         function moveObstacle() {
             obstacleLeft -=2
-            obstacle.style.left = obstacleLeft + gap + 'px'
+            obstacle.style.left = obstacleLeft + 'px'
             topObstacle.style.left - obstacleLeft + 'px'
 
             if (obstacleLeft === -60) {

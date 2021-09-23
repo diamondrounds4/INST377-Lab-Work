@@ -29,25 +29,27 @@ document.addEventListener('DOMContentLoaded' , () => {
     document.addEventListener('keyup', control)
 
     function generateObstacle() {
-       /* let obstacleLeft = 500
-        let randomHeight = Math.random() * 60
-        let obstacleBottom = randomHeight*/
+       /* 
+        let randomHeight = Math.random() * 60*/
+        let obstacleLeft = 500
+        let obstacleBottom = 150
         const obstacle = document.createElement('div')
         obstacle.classList.add('obstacle')
         gameDisplay.appendChild(obstacle)
+        obstacle.style.left = obstacleLeft + 'px'
+        obstacle.style.bottom = obstacleBottom + 'px'
     }
-
-    generateObstacle()
+    
+generateObstacle()
+    
        /* const topObstacle = document.createElement('div')
         if (!isGameOver) {
             obstacle.classList.add('obstacle')
             topObstacle.classList.add('topObstacle')
         }
-        gameDisplay.appendChild(obstacle)
+        
         gameDisplay.appendChild(topObstacle)
-        obstacle.style.left = obstacleLeft + 'px'
         topObstacle.style.left = obstacleLeft + 'px'
-        obstacle.style.bottom = obstacleBottom + 'px'
         topObstacle.style.bottom = obstacleBottom + gap + 'px'
 
         function moveObstacle() {

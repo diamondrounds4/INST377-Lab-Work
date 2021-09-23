@@ -10,10 +10,10 @@ document.addEventListener('DOMContentLoaded' , () => {
     function startGame() {
         birdBottom -= gravity
         bird.style.bottom = birdBottom + 'px'
-        bird.style.left = birdLeft + 'px'
+        bir.style.left = birdLeft + 'px'
     }
 
-    let gameTimerId = setInterval(startGame, 20)
+    let timerId = setInterval(startGame, 20)
 
     function control(e) {
         if (e.keyCode === 32) {

@@ -34,7 +34,10 @@ document.addEventListener('DOMContentLoaded' , () => {
         let obstacleBottom = randomHeight*/
         const obstacle = document.createElement('div')
         obstacle.classList.add('obstacle')
+        gameDisplay.appendChild(obstacle)
     }
+
+    generateObstacle()
        /* const topObstacle = document.createElement('div')
         if (!isGameOver) {
             obstacle.classList.add('obstacle')

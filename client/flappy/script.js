@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded' , () => {
 
     let birdLeft = 220
     let birdBottom = 100
-    let gravity = 3
+    let gravity = 2
     let isGameOver = false
     let gap = 430
 
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded' , () => {
     }
 
     function jump() {
-        if (birdBottom < 500) birdBottom += 50
+        if (birdBottom < 418) birdBottom += 50
         bird.style.bottom = birdBottom + 'px'
         console.log(birdBottom)
     }

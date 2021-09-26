@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Diamond Rounds Lab 3</title>
+        <link rel="stylesheet" href="styles.css"/>
+        <script src='script.js'></script>
+    </head>
+    <body>
+        <div class='header' style='background-color: rgba(0,139, 139,0.8);
+        height: 30px; width: 1500px;'>
+            <p>Diamond Rounds Lab 3: Flexbox Demo</p>
+        </div>
+        <div class='menu-box' style='color: #fff;
+        background-color: #5995DA; 
+        box-sizing: b                                                                                                                                              order-box; 
+        padding: 20px 0;
+        display: flex;
+        justify-content: center;'>
+            <div class='menu' style='border: 1px solid #fff;
+            width: 800px;
+            display: flex;
+            justify-content: space-between;
+            margin-left: 20px;'>
+                <div class='date'>Sept 17, 2021</div>
+                <div class='links' style='color: #fff'>
+                    <div class='database-memo'>
+                        <a href='https://data.html'>
+                        Database Demos</a></div>
+                    <div class='main-page'>
+                        <a href='http://localhost:3000/lab_3/'>
+                            Main Page</a></div>
+                </div>    
+            </div>
+        </div>
+
+        <div class='header-container' style='color: #5995DA;
+        background-color: #D6E9FE;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;'>
+            <div class='header' style='justify-content: space-between; 
+            margin-bottom: 20px;'>
+                <div class='group-link' style='color: #5995DA; align-self: base-line'>Group Project Link (no site yet)</div>
+                <div class='logo' style='align-self: center;
+                margin-bottom: 20px;'><img src='images/awesome-logo.svg'/></div>
+                <div class='my-github' style='color: #5995DA; align-self: flex-end'>
+                    <a href='https://github.com/diamondrounds4/INST377-Lab-Work'>
+                    My Github</a></div>
+            </div>
+        </div>
+
+        <div class='carousel'>
+          <div class='carousel_item carousel_item--visible'>
+                <img src='images/one.svg'/>
+            </div>
+            <div class='carousel_item'>
+                <img src='images/two.svg'/>
+            </div>
+            <div class='carousel_item'>
+                <img src='images/three.svg'/>
+            </div>
+            <div class='carousel_item'>
+                <img src='images/four.svg'/>
+            </div>
+            <div class='carousel_item'>
+                <img src='images/five.svg'/>
+            </div>
+
+            <div class="carousel_buttons">
+                <button id='carousel_prev' aria-label='prev'>Prev</button>
+                <button id='carousel_next' aria-label='next'>Next</button>
+            </div>
+        </div>
+
+        <div class='footer' style='display: flex;
+        justify-content: space-between;'>
+            <div class='footer-item footer-one' style='background-color: #5995DA;
+            flex: initial; width: 300px'>footer item 1</div>
+            <div class='footer-item footer-two' style='border: 1px solid #fff;
+            background-color: #D6E9FE; height: 200px; flex: 1; width: 400px;'>footer item 2</div>
+            <div class='footer-item footer-three' style='background-color: #5995DA;
+            flex: initial; width: 300px'>footer item 3</div>
+        </div>
+    </body>
+</html>

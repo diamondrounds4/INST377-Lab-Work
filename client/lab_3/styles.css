@@ -30,6 +30,12 @@
     color: #fff;
   }
 
+  .main-page,
+  .database-demos{
+    margin-left: 20px;
+    color:white;
+  }
+
   .header-container {
     color: #5995DA;
     background-color: #D6E9FE;
@@ -90,6 +96,7 @@
     background-color: #D6E9FE;
     height: 200px;
     flex: 1;
+    justify-content: flex-start;
   }
 
 .footer-one,

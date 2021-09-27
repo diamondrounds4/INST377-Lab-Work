@@ -4,12 +4,12 @@ const totalSlides = slides.length;
 
 document.
     querySelector('carousel_next')
-    .addEventListener("click", function() {
+    .addEventListener('click', function() {
     nextSlide();
     });
 document.
     querySelector('carousel_prev')
-    .addEventListener("click", function() {
+    .addEventListener('click', function() {
     prevSlidee();
     });
 

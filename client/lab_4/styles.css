@@ -1,35 +1,99 @@
-.photo-grid-container .carousel {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .title {
+      background:
+       rgba(0,139, 139,0.8);
+      padding: 10px 15px
+  }
+
+  .menu-box {
+    color: #fff;
+    background-color: #5995DA;  /* Blue */
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;    /* Add this */
+  }
+  
+  .menu {
+    border: 1px solid #fff;  /* For debugging */
+    width: 900px;
+  }
+
+  .links {
+    border: 1px solid #fff;  /* For debugging */
+    display: flex;
+    justify-content: flex-end;
+    color: #fff;
+  }
+
+  .main-page,
+  .database-demos{
+    margin-left: 20px;
+    color:white;
+  }
+
+  .header-container {
+    color: #5995DA;
+    background-color: #D6E9FE;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .header {
+    width: 900px;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+.group-link,
+.my-github {
+  align-self: flex-end;
+  margin-bottom: 20px;
+  color: #5995DA
+}
+
+.photo-grid-container {
+    display: flex;
+    justify-content: center;
+  }
+
+.carousel {
     overflow: hidden;
     max-width: 600px;
     position: relative;
 }
 
-.photo-grid-container .carousel .carousel__item,
-.photo-grid-container .carousel .carousel__item--hidden {
+.carousel .carousel__item,
+.carousel .carousel__item--hidden {
     display: none;
 }
 
-.photo-grid-container .carousel .carousel_item img {
+.carousel .carousel_item img {
     width: 100%;
     max-width: 600px;
     height: auto;
 
 }
 
-.photo-grid-container .carousel .carousel_item--visible {
+.carousel .carousel_item--visible {
     display: block;
     animation: fadeVisibility 0.5s;
 }
 
-.photo-grid-container .carousel .carousel_button{
+.carousel .carousel_button{
     display: flex;
     justify-content: space-between;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
 }
-
-.photo-grid-container .carousel .carousel_button button {
+.carousel .carousel_button button {
     border-radius: 50px;
     border: 0;
     font-weight: bold;
@@ -37,12 +101,11 @@
     width: 40px;
     height: 40px;
 }
-
-.photo-grid-container .carousel .carousel_button button#carousel_prev {
+.carousel .carousel_button button#carousel_prev {
     margin-left: 20px;
 }
 
-.photo-grid-container .carousel .carousel_button button#carousel_next {
+.carousel .carousel_button button#carousel_next {
     margin-right: 20px;
 }
 
@@ -54,4 +117,24 @@
         opacity: 1;
         transform: opacity linear;
     }
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footer-item {
+    border: 1px solid #fff;
+    background-color: #D6E9FE;
+    height: 200px;
+    flex: 1;
+    justify-content: flex-start;
+  }
+
+.footer-one,
+.footer-three {
+  background-color: #5995DA;
+  flex: initial;
+  width: 300px;
 }

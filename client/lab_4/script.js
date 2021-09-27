@@ -5,13 +5,13 @@ const totalSlides = slides.length
 document.
     querySelector('carousel_next')
     .addEventListener('click', function() {
-        moveToNextSlide();
+        nextSlide();
     });
 
 document.
     querySelector('carousel_prev')
     .addEventListener('click', function() {
-        moveToPrevSlide();
+        prevSlide();
     });
 
 function updateSlidePosition() {
@@ -22,7 +22,7 @@ function updateSlidePosition() {
     slides[slidePosition].classList.add('carousel_item--visible')
 }
 
-function moveToNextSlide() {
+function nextSlide() {
     if (slidePosition == totalSlides - 1) {
         slidePosition = 0;
     } else {
@@ -31,7 +31,7 @@ function moveToNextSlide() {
     updateSlidePosition();
 }
 
-function moveToPrevSlide() {
+function prevSlide() {
     if (slidePosition == totalSlides) {
         slidePosition =  totalSlides - 1;
     } else {

@@ -5,7 +5,7 @@
   }
   
   .title {
-      background-color: rgba(0,139, 139,0.8);
+      background: rgba(0,139, 139,0.8);
       padding: 10px 15px
   }
 
@@ -34,7 +34,7 @@
   .main-page,
   .database-demos{
     margin-left: 20px;
-    color:white;
+    color: white;
   }
 
   .header-container {

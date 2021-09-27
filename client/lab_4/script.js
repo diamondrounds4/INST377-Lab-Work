@@ -15,9 +15,9 @@ document.
 
 function updateSlidePosition() {
     for (let slide of slides) {
-    slide.classList.remove('carousel__item--visible');
-    slide.classList.add('carousel__item--hidden');
-     }
+        slide.classList.remove('carousel__item--visible');
+        slide.classList.add('carousel__item--hidden');
+    }
 
     slides[slidePosition].classList.add('carousel__item--visible');
 }

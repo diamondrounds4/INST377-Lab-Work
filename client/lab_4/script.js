@@ -1,25 +1,25 @@
 let slidePosition = 0;
-const slides = document.querySelectorAll('carousel__item');
+const slides = document.querySelectorAll('carousel_item');
 const totalSlides = slides.length;
 
 document.
-    querySelector('carousel__button--next')
+    querySelector('carousel_button--next')
     .addEventListener("click", function() {
     nextSlide();
     });
 document.
-    querySelector('carousel__button--prev')
+    querySelector('carousel_button--prev')
     .addEventListener("click", function() {
     prevSlidee();
     });
 
 function updateSlidePosition() {
     for (let slide of slides) {
-        slide.classList.remove('carousel__item--visible');
-        slide.classList.add('carousel__item--hidden');
+        slide.classList.remove('carousel_item--visible');
+        slide.classList.add('carousel_item--hidden');
     }
 
-    slides[slidePosition].classList.add('carousel__item--visible');
+    slides[slidePosition].classList.add('carousel_item--visible');
 }
 
 function nextSlide() {

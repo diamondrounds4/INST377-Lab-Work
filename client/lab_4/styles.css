@@ -5,9 +5,10 @@
   }
   
   .title {
-      background: rgba(0,139, 139,0.8);
-      padding: 10px 15px
-  }
+    background:
+     rgba(0,139, 139,0.8);
+    padding: 10px 15px
+}
 
   .menu-box {
     color: #fff;

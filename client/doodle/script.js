@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded' , () => {
                 platform.bottom -= 4
                 let visual = platform.visual 
                 visual.style.bottom = platform.bottom + 'px'
-                jump()
+                
             })
         }
     }
@@ -76,7 +76,8 @@ document.addEventListener('DOMContentLoaded' , () => {
         if (!isGameOver) {
             createDoodler()
             createPlatforms()
-            setInterval(movePlatforms, 30)
+            setInterval(movePlatforms,30)
+            jump()
         }
     }
     //attach to button

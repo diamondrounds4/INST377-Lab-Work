@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded' , () => {
     }
 
     function start() {
-        if (!isGameOver {
+        if (!isGameOver) {
             createDoodler()
             createPlatforms()
         }

@@ -21,14 +21,14 @@ document.addEventListener('DOMContentLoaded' , () => {
 
             const visual = this.visual
             visual.classList.add('platform')
-            visual.style.left = this.left * 'px'
-            visual.style.bottom = this.bottom * 'px'
+            visual.style.left = this.left + 'px'
+            visual.style.bottom = this.bottom + 'px'
             grid.appendChild(visual)
         }
     }
 
     function createPlatforms() {
-        for (let i = 0; i < platformCount; i++) {
+        for (let i =0; i < platformCount; i++) {
             let platGap = 600 / platformCount
             let newPlatBottom = 100 + i * platGap
             let newPlatform = new Platform(newPlatBottom)

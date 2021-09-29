@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded' , () => {
             createDoodler()
             createPlatforms()
         }
-        //attach to button
-        start()
     }
+    //attach to button
+    start()
 })

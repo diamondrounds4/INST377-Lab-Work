@@ -13,9 +13,9 @@ document.addEventListener('DOMContentLoaded' , () => {
         doodler.style.bottom = doodlerBottomSpace + 'px'
     } 
 
-    class Platform{
-        constructor(newPLatBottom) {
-            this.bottom = newPLatBottom
+    class Platform {
+        constructor(newPlatBottom) {
+            this.bottom = newPlatBottom
             this.left = Math.random() * 315
             this.visual = document.createElement('div')
 
@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded' , () => {
     function createPlatforms() {
         for (let i = 0; i < platformCount; i++) {
             let platGap = 600 / platformCount
-            let newPLatBottom = 100 + i * platGap
+            let newPlatBottom = 100 + i * platGap
             let newPlatform = new Platform()
         }
     }

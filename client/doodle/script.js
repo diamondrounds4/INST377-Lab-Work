@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded' , () => {
         if (!isGameOver) {
             createDoodler()
             createPlatforms()
-            movePlatforms()
+            setInterval(movePlatforms, 30)
         }
     }
     //attach to button

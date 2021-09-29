@@ -39,10 +39,21 @@ document.addEventListener('DOMContentLoaded' , () => {
         
     }
 
+    function movePlatforms() {
+        if (doodlerBottomSpace > 200) {
+            platforms.forEach(platform => {
+                platform.bottom -= 4
+                let visual = platform.visual 
+                visual.style.bottom = platform.bottom + 'px'
+            })
+        }
+    }
+
     function start() {
         if (!isGameOver) {
             createDoodler()
             createPlatforms()
+            movePlatforms()
         }
     }
     //attach to button

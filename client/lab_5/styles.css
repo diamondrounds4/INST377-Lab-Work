@@ -45,3 +45,7 @@
     padding: 20px 0;
     align-items: baseline;
   }
+
+  .questions {
+      justify-content: space-evenly;
+  }

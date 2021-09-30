@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded' , () => {
                     platforms.shift()
                     score++
                     console.log(platforms)
-                    let newPlatform = new Platform(600)
+                    var newPlatform = new Platform(600)
                     platforms.push(newPlatform)
                 }
             })
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded' , () => {
         console.log('game over')
         isGameOver = true
         while (grid.firstChild) {
-            grid.replaceChild(grid.firstChild)
+            grid.removeChild(grid.firstChild)
         }
         grid.innerHTML = score
         clearInterval(upTimerId)
@@ -168,9 +168,8 @@ document.addEventListener('DOMContentLoaded' , () => {
             createDoodler()
             setInterval(movePlatforms,30)
             jump()
-            document.addEventListener('keyup',control)
+            document.addEventListener('keyup', control)
         }
     }
-    //attach to button
     start()
 })

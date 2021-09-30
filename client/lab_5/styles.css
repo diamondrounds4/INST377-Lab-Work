@@ -32,7 +32,9 @@
     align-items: center;
     justify-content: flex-start;
     display: flex;
-    padding: 40px 20px;
+    padding: 40px 15px;
+    display: inline-block;
+    border-radius: 4px;
   }
 
   .submit-box {

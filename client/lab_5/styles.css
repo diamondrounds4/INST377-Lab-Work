@@ -31,10 +31,11 @@
     width: 1100px;
     align-items: center;
     justify-content: flex-start;
-    display: flex;
-    padding: 40px 15px;
     display: inline-block;
     border-radius: 4px;
+    padding: 10px 15px;
+    margin: 0;
+    margin-bottom: 5px;
   }
 
   .submit-box {

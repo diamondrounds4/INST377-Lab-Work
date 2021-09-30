@@ -27,7 +27,7 @@
   }
 
   .heading {
-    background-color: lightpink;
+    background-color: rgb(253, 203, 210);
     width: 1100px;
     align-items: center;
     justify-content: flex-start;
@@ -39,7 +39,7 @@
   }
 
   .submit-box {
-    background-color: lavender;
+    background-color: rgb(236, 197, 252);
     display: inline-block;
     border-radius: 4px;
     padding: 20px 0;

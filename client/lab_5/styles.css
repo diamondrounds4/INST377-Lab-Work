@@ -97,3 +97,18 @@
   .legacy-form-row input[type='radio'] {
   float: left;
   }
+
+  .submit button {
+    font-size: 16px;
+    font-weight: bold;
+  
+    color: #FFFFFF;
+    background-color: rgb(161, 47, 161);
+  
+    border: none;
+    border-radius: 3px;
+  
+    padding: 10px 40px;
+    cursor: pointer;
+  }
+  

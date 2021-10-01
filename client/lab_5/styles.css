@@ -44,6 +44,7 @@
     border-radius: 4px;
     padding: 20px 10;
     align-items: baseline;
+    width: 300px;
   }
 
   .questions {
@@ -115,7 +116,7 @@
   
   .future {
     background-color: rgb(223, 150, 252);
-    width: 700px;
+    width: 600px;
     align-items: center;
     justify-content: flex-start;
     display: inline-block;

@@ -49,3 +49,40 @@
   .questions {
       justify-content: space-between;
   }
+
+  .form-row {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  
+  .form-row label {
+    margin-bottom: 15px;
+  }
+
+  .food-preference {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .food-preference label {
+    margin-bottom: 15px;
+  }
+
+  .legacy-form-row {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .legacy-form-row label {
+    margin-bottom: 15px;
+  }
+  

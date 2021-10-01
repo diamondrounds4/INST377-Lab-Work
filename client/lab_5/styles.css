@@ -42,7 +42,7 @@
     background-color: rgb(223, 150, 252);
     display: inline-block;
     border-radius: 4px;
-    padding: 20px 0;
+    padding: 20px 10;
     align-items: baseline;
   }
 
@@ -78,8 +78,7 @@
     margin-bottom: 40px;
     display: flex;
     justify-content: flex-start;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-flow: column wrap;
   }
 
   .legacy-form-row label {

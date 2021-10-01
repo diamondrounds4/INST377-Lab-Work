@@ -127,6 +127,6 @@
   }
 
   .submit-box .future {
-      align-items: center;
+      align-content: center;
       justify-content: space-evenly;
   }

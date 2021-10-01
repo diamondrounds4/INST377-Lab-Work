@@ -75,10 +75,8 @@
   }
 
   .legacy-form-row {
-    border: none;
+    border: 10px;
     margin-bottom: 20px;
-    flex-wrap: wrap;
-    flex-direction: column-reverse;
     align-content: center;}
 
   .legacy-form-row legend {

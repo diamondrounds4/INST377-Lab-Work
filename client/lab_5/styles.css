@@ -113,3 +113,14 @@
     align-items: center;
   }
   
+  .future {
+    background-color: rgb(223, 150, 252);
+    width: 700px;
+    align-items: center;
+    justify-content: flex-start;
+    display: inline-block;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 5px;
+    margin: 20px 25px;
+  }

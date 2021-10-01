@@ -28,6 +28,7 @@
 
   .heading {
     background-color: rgb(245, 124, 239);
+    height: 300px;
     width: 1390px;
     align-content: center;
     justify-content: flex-start;
@@ -54,6 +55,7 @@
   .form-row {
     margin-bottom: 40px;
     display: flex;
+    align-items: center;
     justify-content: flex-start;
     flex-direction: column;
     flex-wrap: wrap;
@@ -66,6 +68,7 @@
   .food-preference {
     margin-bottom: 20px;
     display: flex;
+    align-items: center;
     justify-content: flex-start;
     flex-direction: column;
     flex-wrap: wrap;
@@ -78,7 +81,7 @@
   .legacy-form-row {
     border: 10px;
     margin-bottom: 20px;
-    align-content: center;}
+    align-items: center;}
 
   .legacy-form-row legend {
    margin-bottom: 15px;
@@ -111,7 +114,7 @@
   
     padding: 10px 40px;
     cursor: pointer;
-    align-items: center;
+    align-content: center;
   }
   
   .future {

@@ -78,11 +78,10 @@
     margin-bottom: 40px;
     display: flex;
     justify-content: flex-start;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
   }
 
   .legacy-form-row label {
     margin-bottom: 15px;
   }
-  

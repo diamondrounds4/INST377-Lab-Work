@@ -125,3 +125,8 @@
     margin-bottom: 5px;
     margin: 20px 25px;
   }
+
+  .submit-box .future {
+      align-items: center;
+      justify-content: space-evenly;
+  }

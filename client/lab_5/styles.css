@@ -117,7 +117,7 @@
   .future {
     background-color: rgb(223, 150, 252);
     width: 700px;
-    align-items: center;
+    align-content: center;
     justify-content: center;
     display: inline-block;
     border-radius: 4px;
@@ -127,6 +127,7 @@
   }
 
   .submit-box .future {
-      align-content: center;
-      justify-content: space-evenly;
+      display: flex;
+      align-content: space-between;
+      justify-content: center;
   }

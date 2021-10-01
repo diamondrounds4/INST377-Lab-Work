@@ -83,17 +83,17 @@
    margin-bottom: 15px;
   }
 
-    .legacy-form-row .radio-label {
-  display: block;
-  font-size: 14px;
-  padding: 0 20px 0 10px;
-    }
+  .legacy-form-row .radio-label {
+   display: block;
+   font-size: 14px;
+   padding: 0 20px 0 10px;
+  }
 
-    .legacy-form-row input[type='radio'] {
-    margin-top: 2px;
-    }
+  .legacy-form-row input[type='radio'] {
+  margin-top: 2px;
+  }
   
-    .legacy-form-row .radio-label,
-    .legacy-form-row input[type='radio'] {
-    float: left;
-    }
+  .legacy-form-row .radio-label,
+  .legacy-form-row input[type='radio'] {
+  float: left;
+  }

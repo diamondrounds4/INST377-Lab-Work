@@ -8,7 +8,7 @@
     margin: 0;
     padding: 0;
     font-family: ‘Segoe UI’, Candara, ‘Bitstream Vera Sans’, ‘DejaVu Sans’,
-      ‘Bitsream Vera Sans’, ‘Trebuchet MS’, Verdana, ‘Verdana Ref’, sans-serif;
+    ‘Bitsream Vera Sans’, ‘Trebuchet MS’, Verdana, ‘Verdana Ref’, sans-serif;
     background-color: rgb(198, 210, 253);
   }
   
@@ -47,7 +47,7 @@
   }
 
   .questions {
-      justify-content: space-between;
+    justify-content: space-between;
   }
 
   .form-row {
@@ -75,25 +75,27 @@
   }
 
   .legacy-form-row {
-  border: none;
-  margin-bottom: 20px;
-}
+    border: none;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    align-content: center;}
 
-.legacy-form-row legend {
-  margin-bottom: 15px;
-}
+  .legacy-form-row legend {
+   margin-bottom: 15px;
+  }
 
-.legacy-form-row .radio-label {
+    .legacy-form-row .radio-label {
   display: block;
   font-size: 14px;
   padding: 0 20px 0 10px;
-}
+    }
 
-.legacy-form-row input[type='radio'] {
-  margin-top: 2px;
-}
+    .legacy-form-row input[type='radio'] {
+    margin-top: 2px;
+    }
   
-.legacy-form-row .radio-label,
-.legacy-form-row input[type='radio'] {
-  float: left;
-}
+    .legacy-form-row .radio-label,
+    .legacy-form-row input[type='radio'] {
+    float: left;
+    }

@@ -9,7 +9,7 @@
     padding: 0;
     font-family: ‘Segoe UI’, Candara, ‘Bitstream Vera Sans’, ‘DejaVu Sans’,
     ‘Bitsream Vera Sans’, ‘Trebuchet MS’, Verdana, ‘Verdana Ref’, sans-serif;
-    background-color: rgb(198, 210, 253);
+    background-color: rgb(255, 95, 148);
   }
   
   /* Page Layout */
@@ -27,7 +27,7 @@
   }
 
   .heading {
-    background-color: rgb(253, 203, 210);
+    background-color: rgb(245, 124, 215);
     width: 1100px;
     align-items: center;
     justify-content: flex-start;

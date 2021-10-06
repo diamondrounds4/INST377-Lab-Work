@@ -176,7 +176,8 @@ document.addEventListener('DOMContentLoaded', () => {
           squares[index].classList.remove('taken')
         })
         const squaresRemoved = squares.splice(i, width)
-        console.log(squaresRemoved)
+        squares = squaresRemoved.concat(squares)
+        squares.forEach(cell => grid.appendChild(cell))
       }
     }
   }

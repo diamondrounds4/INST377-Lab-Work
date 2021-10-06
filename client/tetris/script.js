@@ -63,16 +63,16 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   }
 
-  timerId = setInterval(moveDown, 1000)
+  // timerId = setInterval(moveDown, 1000)
 
   function control(e) {
     if (e.keyCode === 37) {
       moveLeft()
-    } else if (e.keycode === 38) {
+    } else if (e.keyCode === 38) {
       rotate()
     } else if (e.keyCode === 39) {
       moveRight()
-    } else if (e.keycode === 40) {
+    } else if (e.keyCode === 40) {
       moveDown()
     }
   }
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
     displaySquares.forEach(square => {
       sqaure.classList.remove('tetromino')
     })
-    upNextTetrominoes[nextRandom].forEach(index => {
+    upNextTetrominoes[nextRandom].forEach( index => {
       displaySquares[displayIndex + index].classList.add('tetromino')
     })
   }
@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function addScore() {
     for (let i = 0; i < 199; i += width) {
-      const row = [i, i + 1, i + 3, i + 4, i + 5, i + 6, i + 7, i + 8]
+      const row = [i, i + 1, i + 3, i + 4, i + 5, i + 6, i + 7, i + 8, i + 9]
 
       if (row.every(index => squares[index].classList.contains('taken'))) {
         score += 10
@@ -175,7 +175,8 @@ document.addEventListener('DOMContentLoaded', () => {
         row.forEach(index => {
           squares[index].classList.remove('taken')
         })
-        const squaresRemoved = square.splice(i, width)
+        const squaresRemoved = squares.splice(i, width)
+        console.log(squaresRemoved)
       }
     }
   }

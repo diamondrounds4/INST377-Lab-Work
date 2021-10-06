@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const grid = document.querySelector('.grid')
   let squares = Array.from(document.querySelectorAll('.grid div'))
   const scoreDisplay = document.querySelector('#score')
-  const startBin =document.querySelector('#start-button')
+  const startBin = document.querySelector('#start-button')
   const width = 10
   let nextRandom = 0
   let timerId
@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
     displaySquares.forEach(square => {
       sqaure.classList.remove('tetromino')
     })
-    upNextTetrominoes[nextRandom].forEach( index => {
+    upNextTetrominoes[nextRandom].forEach(index => {
       displaySquares[displayIndex + index].classList.add('tetromino')
     })
   }

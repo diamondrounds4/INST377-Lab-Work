@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const theTetrominoes = [lTetromino, zTetromino, tTetromino, oTetromino, iTetromino]
 
   let currentPosition = 4
-  // let currentRotation = 0
+  let currentRotation = 0
 
   let random = Math.floor(Math.random()*theTetrominoes.length)
   let current = theTetrominoes[random][0]
@@ -69,11 +69,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.keyCode === 37) {
       moveLeft()
     } else if (e.keyCode === 38) {
-      // rotate()
+      rotate()
     } else if (e.keyCode === 39) {
       moveRight()
     } else if (e.keyCode === 40) {
-      //moveDown()
+      moveDown()
     }
   }
   document.addEventListener('keyup', control)
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
       current = theTetrominoes[random][currentRotation]
       currentPosition = 4
       draw()
-      // displayShape()
+      displayShape()
       // addScore()
     }
   }
@@ -122,37 +122,37 @@ document.addEventListener('DOMContentLoaded', () => {
     draw()
   }
 
-  // function rotate() {
-// undraw()
-// currentRotation++
-// if (currentRotation === current.length) {
-// currentRotation = 0
-// }
-// current = theTetrominoes[random][currentRotation]
-// draw()
-  // }
+  function rotate() {
+    undraw()
+    currentRotation++
+    if (currentRotation === current.length) {
+      currentRotation = 0
+    }
+    current = theTetrominoes[random][currentRotation]
+    draw()
+  }
+
+  const displaySquares = document.querySelectorAll('.mini-grid div')
+  const displayWidth = 4
+  let displayIndex = 0
+
+  const upNextTetrominoes = [
+    [1, displayWidth + 1, displayWidth * 2 + 1, 2],
+    [0, displayWidth, displayWidth + 1, displayWidth * 2 + 1],
+    [1, displayWidth, displayWidth + 1, displayWidth + 2],
+    [0, 1, displayWidth, displayWidth + 1],
+    [1, displayWidth + 1, displayWidth * 2 + 1, displayWidth * 3 + 1]
+  ]
+
+  function displayShape() {
+    displaySquares.forEach(square => {
+      square.classList.remove('tetromino')
+    })
+    upNextTetrominoes[nextRandom].forEach(index => {
+      displaySquares[displayIndex + index].classList.add('tetromino')
+    })
+  }
 })
-// const displaySquares = document.querySelectorAll('.mini-grid div')
-// const displayWidth = 4
-// let displayIndex = 0
-
-// const upNextTetrominoes = [
-// [1, displayWidth + 1, displayWidth * 2 + 1, 2],
-// [0, displayWidth, displayWidth + 1, displayWidth * 2 + 1],
-// [1, displayWidth, displayWidth + 1, displayWidth + 2],
-// [0, 1, displayWidth, displayWidth + 1],
-// [1, displayWidth + 1, displayWidth * 2 + 1, displayWidth * 3 + 1]
-// ]
-
-// function displayShape() {
-// displaySquares.forEach(square => {
-// square.classList.remove('tetromino')
-// })
-// upNextTetrominoes[nextRandom].forEach(index => {
-// displaySquares[displayIndex + index].classList.add('tetromino')
-// })
-// }
-
 // startBin.addEventListener('click', () => {
 // if (timerId) {
 // clearInterval(timerId)
@@ -180,13 +180,3 @@ document.addEventListener('DOMContentLoaded', () => {
 // }
 // }
 // }
-
-
-
-
-
-
-
-
-
-// })

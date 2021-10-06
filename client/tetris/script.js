@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const theTetrominoes = [lTetromino, zTetromino, tTetromino, oTetromino, iTetromino]
 
   let currentPosition = 4
-  let currentRotation = 0
+  // let currentRotation = 0
 
   let random = Math.floor(Math.random()*theTetrominoes.length)
   let current = theTetrominoes[random][0]
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (e.keyCode === 37) {
       moveLeft()
     } else if (e.keyCode === 38) {
-      rotate()
+      // rotate()
     } else if (e.keyCode === 39) {
       moveRight()
     } else if (e.keyCode === 40) {
@@ -93,8 +93,8 @@ document.addEventListener('DOMContentLoaded', () => {
       current = theTetrominoes[random][currentRotation]
       currentPosition = 4
       draw()
-      displayShape()
-      addScore()
+      // displayShape()
+      // addScore()
     }
   }
 
@@ -189,4 +189,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-//})
+// })

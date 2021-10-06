@@ -122,15 +122,15 @@ document.addEventListener('DOMContentLoaded', () => {
     draw()
   }
 
-  function rotate() {
-    undraw()
-    currentRotation++
-    if (currentRotation === current.length) {
-      currentRotation = 0
-    }
-    current = theTetrominoes[random][currentRotation]
-    draw()
-  }
+  // function rotate() {
+// undraw()
+// currentRotation++
+// if (currentRotation === current.length) {
+// currentRotation = 0
+// }
+// current = theTetrominoes[random][currentRotation]
+// draw()
+  // }
 })
 // const displaySquares = document.querySelectorAll('.mini-grid div')
 // const displayWidth = 4

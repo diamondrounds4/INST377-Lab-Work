@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function displayShape() {
     displaySquares.forEach(square => {
-      sqaure.classList.remove('tetromino')
+      square.classList.remove('tetromino')
     })
     upNextTetrominoes[nextRandom].forEach(index => {
       displaySquares[displayIndex + index].classList.add('tetromino')
@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function addScore() {
     for (let i = 0; i < 199; i += width) {
-      const row = [i, i + 1, i + 3, i + 4, i + 5, i + 6, i + 7, i + 8, i + 9]
+      const row = [i, i + 1, i + 2, i + 3, i + 4, i + 5, i + 6, i + 7, i + 8, i + 9]
 
       if (row.every(index => squares[index].classList.contains('taken'))) {
         score += 10

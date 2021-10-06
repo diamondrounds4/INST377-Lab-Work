@@ -152,19 +152,19 @@ document.addEventListener('DOMContentLoaded', () => {
       displaySquares[displayIndex + index].classList.add('tetromino')
     })
   }
-})
-// startBin.addEventListener('click', () => {
-// if (timerId) {
-// clearInterval(timerId)
-// timerId = null
-// } else {
-// draw()
-// timerId = setInterval(moveDown, 1000)
-// nextRandom = Math.floor(Math.random() * theTetrominoes.length)
-// displayShape()
-// }
-// })
 
+  startBin.addEventListener('click', () => {
+    if (timerId) {
+      clearInterval(timerId)
+      timerId = null
+    } else {
+      draw()
+      timerId = setInterval(moveDown, 1000)
+      nextRandom = Math.floor(Math.random() * theTetrominoes.length)
+      displayShape()
+    }
+  })
+})
 // function addScore() {
 // for (let i = 0; i < 199; i += width) {
 // const row = [i, i + 1, i + 2, i + 3, i + 4, i + 5, i + 6, i + 7, i + 8, i + 9]

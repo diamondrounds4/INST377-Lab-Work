@@ -9,49 +9,51 @@
     </head>
 
     <body>
-        <h1><strong>Assignmennt 2</strong></h1>
+        <h1><strong>Assignment 2</strong></h1>
 
-        <script>
-            const data = 'https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json';
+        <div class='search-box'>
+            <input type='text'/>
+            <script>
+                const data = 'https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json';
 
-            const vendors_list = [];
+                const vendors_list = [];
 
-            fetch(data)
-                .then(blob => blob.json())
-                .then(resource => vendors_list.push(... resource))
-            
-            function findMatches(wordToMatch, data) {
-                return data.filter(terms => {
-                    const regex = new RegExp(wordToMatch, 'gi')
-                    return term.name.match(regex) || 
-                    term.category.match(regex) || 
-                    term.city.match(regex)
-                });
-            }
+                fetch(data)
+                    .then(blob => blob.json())
+                    .then(resource => vendors_list.push(... resource))
+                
+                function findMatches(wordToMatch, data) {
+                    return data.filter(terms => {
+                        const regex = new RegExp(wordToMatch, 'gi')
+                        return term.name.match(regex) || 
+                        term.category.match(regex) || 
+                        term.city.match(regex)
+                    });
+                }
 
-            function displayMatches() {
-                const matchArray = findMatches(this.value, vendors_list)
-                const html = matchArray.map(term => {
-                    return `
-                        <li> 
-                            <span class="name">${term.name}</span>
-                            <span class="category">${term.category,}</span>
-                            <span class="address">${term.address_line_1}</span>
-                            <span class="city">${term.city}</span>    
-                            <span class="zip">${term.zip}</span>
-                        </li>
-                    `;
-                }).join('');
-                suggestions.innerHTML = html
-            }
+                function displayMatches() {
+                    const matchArray = findMatches(this.value, vendors_list)
+                    const html = matchArray.map(term => {
+                        return `
+                            <li> 
+                                <span class="name">${term.name}</span>
+                                <span class="category">${term.category,}</span>
+                                <span class="address">${term.address_line_1}</span>
+                                <span class="city">${term.city}</span>    
+                                <span class="zip">${term.zip}</span>
+                            </li>
+                        `;
+                    }).join('');
+                    suggestions.innerHTML = html
+                }
 
-            const searchInput = document.querySelector('.search');
-            const suggestions = document.querySelector('.suggestions')
+                const searchInput = document.querySelector('.search');
+                const suggestions = document.querySelector('.suggestions')
 
-            searchInput.addEventListener('change', displayMatches)
-            
-        </script>
-
+                searchInput.addEventListener('change', displayMatches)
+                
+            </script>
+        </div>
     </body>
 
 </html> 

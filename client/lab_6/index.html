@@ -23,7 +23,7 @@
                     .then(resource => vendors_list.push(... resource))
                 
                 function findMatches(wordToMatch, data) {
-                    return data.filter(terms => {
+                    return data.filter(term => {
                         const regex = new RegExp(wordToMatch, 'gi')
                         return term.name.match(regex) || 
                         term.category.match(regex) || 

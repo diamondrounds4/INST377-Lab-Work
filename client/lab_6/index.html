@@ -22,8 +22,8 @@
                     .then(blob => blob.json())
                     .then(resource => vendors_list.push(... resource))
                 
-                function findMatches(wordToMatch, data) {
-                    return data.filter(term => {
+                function findMatches(wordToMatch, vendors_list) {
+                    return vendors_list.filter(term => {
                         const regex = new RegExp(wordToMatch, 'gi')
                         return term.name.match(regex) || 
                         term.category.match(regex) || 

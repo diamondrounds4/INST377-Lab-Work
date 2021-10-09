@@ -46,8 +46,8 @@ document.addEventListener('DOMContentLoaded' , () => {
         const searchInput = document.querySelector('.search');
         const suggestions = document.querySelector('.suggestions');
 
-        searchInput.addEventListener('change', displayMatches);
-        searchInput.addEventListener('keyup', (evt) => {displayMatches(evt)});
+        searchInput.addEventListener('change', displayMatches());
+        searchInput.addEventListener('keyup', async (evt) => {displayMatches(evt)});
     }    
 
     window.onload = windowActions();

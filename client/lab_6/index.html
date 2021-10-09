@@ -36,7 +36,7 @@
                         function displayMatches(event) {
                             const matchArray = findMatches(event.value, vendors_list)
                             const html = matchArray.map(term => {
-                                const regex = new RegExp(event.regex.value, 'gi');
+                                const regex = new RegExp(event.value, 'gi');
                                 const company_name = term.name.replace(regex, `<span class "h1">
                                     ${event.company_name.value}</span>`);
                                 const catergory_name = term.category.replace(regex, `<span class "h1">

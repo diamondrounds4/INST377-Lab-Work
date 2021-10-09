@@ -1,6 +1,5 @@
-import { json } from "body-parser";
-
 document.addEventListener('DOMContentLoaded' , () => {
+    import { json } from "body-parser";
     const data = 'data.json';
     const request = await fetch(data)
     const vendors_list = await request.json()

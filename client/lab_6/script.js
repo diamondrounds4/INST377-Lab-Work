@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded' , () => {
         const data = 'data.json';
         const request = await fetch(data)
         const vendors_list = await request.json()
-        
+
         function findMatches(wordToMatch, vendors_list) {
             return vendors_list.filter(term => {
                 const regex = new RegExp(wordToMatch, 'gi')
@@ -44,10 +44,10 @@ document.addEventListener('DOMContentLoaded' , () => {
         }
 
         const searchInput = document.querySelector('.search');
-        const suggestions = document.querySelector('.suggestions')
+        const suggestions = document.querySelector('.suggestions');
 
-        searchInput.addEventListener('change', displayMatches)
-        searchInput.addEventListener('keyup', (evt) => {displayMatches(evt)})
+        searchInput.addEventListener('change', displayMatches);
+        searchInput.addEventListener('keyup', (evt) => {displayMatches(evt)});
     }    
 
     window.onload = windowActions();

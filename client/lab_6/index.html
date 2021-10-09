@@ -11,7 +11,6 @@
     <body>
         <h1><strong>Assignment 2</strong></h1>
 
-        async function windowActions()
         <div class='search-box'>
             <input type='text'/>
 
@@ -41,11 +40,11 @@
                                 const company_name = term.name.replace(regex, `<span class "h1">
                                     ${event.company_name.value}</span>`);
                                 const catergory_name = term.category.replace(regex, `<span class "h1">
-                                    ${event.category_name.value}</span>`);
+                                    ${event.category.value}</span>`);
                                 const address = term.address_line_1.replace(regex, `<span class "h1">
                                     ${event.address.value}</span>`);
                                 const city_name = term.city.replace(regex, `<span class "h1">
-                                    ${event.city_name.value}</span>`);
+                                    ${event.city.value}</span>`);
                                 const zip_code = term.zip.replace(regex, `<span class "h1">
                                     ${event.zip_code.value}</span>`);  
                                 return `
@@ -64,7 +63,8 @@
                         const searchInput = document.querySelector('.search');
                         const suggestions = document.querySelector('.suggestions')
 
-                        searchInput.addEventListener('change', (evt) => {displayMatches(evt)})
+                        searchInput.addEventListener('change', displayMatches)
+                        searchInput.addEventListener('keyup', (evt) => {displayMatches(evt)})
                     }    
 
                     window.onload = windowActions;

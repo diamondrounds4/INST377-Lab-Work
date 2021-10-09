@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded' , () => {
-    const data = 'data.json';
-    const request = await fetch(data)
-    const vendors_list = await request.json()
-
+    
     async function windowActions() {
+        const data = 'data.json';
+        const request = await fetch(data)
+        const vendors_list = await request.json()
+        
         function findMatches(wordToMatch, vendors_list) {
             return vendors_list.filter(term => {
                 const regex = new RegExp(wordToMatch, 'gi')

@@ -50,6 +50,6 @@ document.addEventListener('DOMContentLoaded' , () => {
         searchInput.addEventListener('keyup', (evt) => {displayMatches(evt)});
     }    
 
-    window.onload = windowActions();
+    window.onload = windowActions;
 
 })

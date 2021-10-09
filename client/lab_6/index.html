@@ -18,9 +18,7 @@
 
                 const vendors_list = [];
 
-                fetch(data)
-                    .then(blob => blob.json())
-                    .then(resource => vendors_list.push(... resource))
+                fetch(data).then(blob => blob.json()).then(resource => vendors_list.push(... resource))
                 
                 function findMatches(wordToMatch, vendors_list) {
                     return vendors_list.filter(term => {

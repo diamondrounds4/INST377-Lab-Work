@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded' , () => {
     
     async function windowActions() {
-        const data = 'data.json';
+        const data = 'https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json';
         const request = await fetch(data)
         const vendors_list = await request.json()
 
@@ -39,14 +39,14 @@ document.addEventListener('DOMContentLoaded' , () => {
                         <span class="zip">${zip_code}</span>
                     </li>
                 `;
-            }).join('');
+            }).join(''); 
             suggestions.innerHTML = html;
         }
 
         const searchInput = document.querySelector('.search');
         const suggestions = document.querySelector('.suggestions');
 
-        searchInput.addEventListener('change', displayMatches());
+        searchInput.addEventListener('change', (evt) => {displayMatches(evt)});
         searchInput.addEventListener('keyup', (evt) => {displayMatches(evt)});
     }    
 

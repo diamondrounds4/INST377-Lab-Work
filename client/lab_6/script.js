@@ -10,36 +10,37 @@ document.addEventListener('DOMContentLoaded' , () => {
                 const regex = new RegExp(wordToMatch, 'gi')
                 return term.name.match(regex) || 
                 term.category.match(regex) || 
-                 term.address_line_1.match(regex) ||
+                term.address_line_1.match(regex) ||
                 term.city.match(regex) ||
                 term.zip.match(regex)
             });
         }
 
         function displayMatches(event) {
-            const matchArray = findMatches(event.value, vendors_list)
+            const matchArray = findMatches(event.target.value, vendors_list)
             const html = matchArray.map(term => {
-                const regex = new RegExp(event.value, 'gi');
-                const company_name = term.name.replace(regex, `<span class "h1">
-                    ${event.company_name.value}</span>`);
-                const catergory_name = term.category.replace(regex, `<span class "h1">
-                    ${event.category.value}</span>`);
-                const address = term.address_line_1.replace(regex, `<span class "h1">
-                    ${event.address.value}</span>`);
-                const city_name = term.city.replace(regex, `<span class "h1">
-                    ${event.city.value}</span>`);
-                const zip_code = term.zip.replace(regex, `<span class "h1">
-                    ${event.zip_code.value}</span>`);  
                 return `
-                    <li> 
-                        <span class="name">${company_name}</span>
-                        <span class="category">${catergory_name}</span>
-                        <span class="address">${address}</span>
-                        <span class="city">${city_name}</span>    
-                        <span class="zip">${zip_code}</span>
+                    <li class="organization"> 
+                        <span class="name">${term.name}</span>
+                    </li>
+                    
+                    <li>
+                        <span class="category">${term.category}</span>
+                    </li>
+                    
+                    <li>
+                        <span class="address">${term.address_line_1}</span>
+                    </li>
+                
+                    <li>    
+                        <span class="city">${term.city}</span>    
+                    </li>
+                    
+                    <li>
+                        <span class="zip">${term.zip}</span>
                     </li>
                 `;
-            }).join(''); 
+            }).join(' ,'); 
             suggestions.innerHTML = html;
         }
 

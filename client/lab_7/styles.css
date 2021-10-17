@@ -1,3 +1,16 @@
+.form-row {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  
+  .form-row label {
+    margin-bottom: 15px;
+  }
+
 .organization {
     list-style-type: disc;
 }
@@ -5,3 +18,4 @@
 li {
     list-style-type: none;
 }
+

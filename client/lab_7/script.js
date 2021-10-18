@@ -1,18 +1,18 @@
 document.addEventListener('DOMContentLoaded' , () => {
     
     async function windowActions() {
-        const data = 'https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json';
-        const request = await fetch(data)
+        console.log('loaded main script');
+        const url = 'https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json';
+        const request = await fetch(url)
         const vendors_list = await request.json()
+        const mymap = L.map('mapid').setView([51.505, -0.09], 13);
+
+        console.log('external dataset', vendors_list);
 
         function findMatches(wordToMatch, vendors_list) {
             return vendors_list.filter(term => {
                 const regex = new RegExp(wordToMatch, 'gi')
-                return term.name.match(regex) || 
-                term.category.match(regex) || 
-                term.address_line_1.match(regex) ||
-                term.city.match(regex) ||
-                term.zip.match(regex)
+                return term.zip.match(regex)
             });
         }
 
@@ -25,17 +25,9 @@ document.addEventListener('DOMContentLoaded' , () => {
                     </li>
                     
                     <li>
-                        <span class="category">${term.category}</span>
-                    </li>
-                    
-                    <li>
                         <span class="address">${term.address_line_1}</span>
                     </li>
                 
-                    <li>    
-                        <span class="city">${term.city}</span>    
-                    </li>
-                    
                     <li>
                         <span class="zip">${term.zip}</span>
                     </li>

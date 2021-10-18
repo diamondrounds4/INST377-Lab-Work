@@ -1,15 +1,20 @@
-.form-row {
-    margin-bottom: 40px;
+.wrapper {
     display: flex;
-    align-items: flex-start;
+    flex-direction: row;
+}
+
+.column {
+    display: flex;
+}
+
+.search-box form {
+    display: flex;
     justify-content: flex-start;
     flex-direction: column;
     flex-wrap: wrap;
-  }
-  
-  .form-row label {
-    margin-bottom: 15px;
-  }
+}
+
+#mapid { height: 180px; }
 
 .organization {
     list-style-type: disc;

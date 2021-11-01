@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded' , () => {
         const vendors_list = await request.json()
         const mymap = L.map('mapid').setView([51.505, -0.09], 13);
 
-        console.log('external dataset', vendors_list);
+        //console.log('external dataset', vendors_list);
 
         function findMatches(wordToMatch, vendors_list) {
             return vendors_list.filter(term => {

@@ -6,10 +6,11 @@ document.addEventListener('DOMContentLoaded' , () => {
         const request = await fetch(url);
         const vendors_list = await request.json();
         
-        function mapInnit() {
-            const mymap = L.map('mapid').setView([51.505, -0.09], 13);
-
-            L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+        // function mapInnit() {
+            const mymap = L.map('mapid').setView([38.989, -76.93], 12);
+            console.log(mymap)
+            const access_token = "pk.eyJ1Ijoic2Ftc29uam9zZXBoMjUiLCJhIjoiY2t1b2Y0OGoxMDRvZjJva2IzYzVlemJ6dSJ9.jkhey_GJUGycclVWyny8JA"
+            L.tileLayer(`https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=${access_token}`, {
                 attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
                 maxZoom: 18,
                 id: 'mapbox/streets-v11',
@@ -17,10 +18,10 @@ document.addEventListener('DOMContentLoaded' , () => {
                 zoomOffset: -1,
                 accessToken: 'pk.eyJ1Ijoic2Ftc29uam9zZXBoMjUiLCJhIjoiY2t1b2Y0OGoxMDRvZjJva2IzYzVlemJ6dSJ9.jkhey_GJUGycclVWyny8JA'
             }).addTo(mymap);
-            return mymap
-        }
+            // return mymap
+        // }
         //console.log('external dataset', vendors_list);
-        mapInnit()
+        // const map = mapInnit()
 
         function findMatches(wordToMatch, vendors_list) {
             return vendors_list.filter(term => {
